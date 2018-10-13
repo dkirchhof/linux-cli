@@ -1,0 +1,17 @@
+{
+  "name": "linux-cli",
+  "version": "1.0.0",
+  "main": "./build/index.js",
+  "license": "MIT",
+  "bin": {
+    "linux-cli": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^10.11.7",
+    "typescript": "^3.1.3"
+  }
+}
