@@ -9,6 +9,14 @@ interface IConfig {
         fallback: string;
         settings: { [s: string]: IDisplaySettings[]; };
     };
+    volume: {
+        device: string;
+        notification: {
+            enabled: boolean;
+            icon: string;
+        };
+        step: number;
+    }
 }
 
 export function getConfigPath() {
