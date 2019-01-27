@@ -8,6 +8,7 @@ function createConnectedString(settings: IDisplaySettings) {
         `--output ${settings.name}`,
         `--mode ${settings.mode}`,
         ...(settings.primary ? ["--primary"] : []),
+        ...(settings.pos ? [`--${settings.pos.mode}`, settings.pos.display] : []),
     ].join(" ");
 }
 
