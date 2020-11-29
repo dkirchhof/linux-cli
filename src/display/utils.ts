@@ -48,7 +48,7 @@ export async function getDisplayStates(): Promise<IDisplayState[]> {
     const xrandrOutput = await exec("xrandr");
 
     return ( 
-        globalMatches(xrandrOutput, /(\w+) ((connected)|(disconnected))/g)
+        globalMatches(xrandrOutput, /(\S+) ((connected)|(disconnected))/g)
         .map(m => ({ 
             name: m[1], 
             connected: m[2] === "connected" 
